@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<input id = 'for_copy_from_input'>
+<button id="attuched_with_input" onclick="copy_var()">copy from input fild</button>
+<script>
+function copy_var(){
+console.log('hello bro')
+// 2 step for copy first select the text then copy it
+// 1st one select
+var get_the_text = document.getElementById('for_copy_from_input')
+get_the_text.select()
+// 2nd one copy the select part
+document.execCommand("Copy")
+get_the_text.unselect()
+}
+</script>
+
+
+
+<span id="only_text_by_click_above_the_text"  style="user-select:all" onclick="copy_just_text_var()">copy me man by clicking above me</span>
+<script>
+function copy_just_text_var(){
+
+// 2 step for copy first select the text then copy it
+// 1st one select
+//above     style="user-select:all"     this part sect the text so we have to just copy the thing
+// 2nd one copy the select part
+document.execCommand("Copy")
+}
+</script>
+
+
+
+</body>
+</html>
